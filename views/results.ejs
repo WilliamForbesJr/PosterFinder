@@ -1,0 +1,37 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+<nav class="navbar bg-dark navbar-dark">
+    <a href="/" class="navbar-brand"><i class="fas fa-film"></i>  Poster Finder</a>
+</nav>
+
+
+<div class="jumbotron">
+    <h1 class="display-1">
+        <center>Results!</center>
+    </h1> 
+</div>
+
+<div class="container">
+    <button class="btn btn-primary btn-lg btn-block" onclick="window.location.href = '/';">Search Again</button>
+
+
+
+        <div class="card-columns">
+                <% data["Search"].forEach(function(movie) { %>
+                        <div class="card text-white">
+                            <a class="card-title text-white" href="<%= movie["Poster"] %>"><img class="card-img" src="<%= movie["Poster"] %>" onerror="this.src='https://static1.squarespace.com/static/54ecf211e4b0ed744420c5b6/567f23f9841abaa3c919b3c0/5681d9cde0327c1884fbdb38/1499366267673/noimage.png?format=300w'">
+                           <div class="card-img-overlay">
+                                <h5 class="card-title text-center h3 movietitle">
+                                    <%= movie["Title"] %>
+                                </h5> 
+                            </div>
+                             </a>
+                        </div>
+            <% }) %>
+        </div>
+    </div>
+
