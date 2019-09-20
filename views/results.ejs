@@ -9,7 +9,7 @@
 </nav>
 
 
-<div class="jumbotron">
+<div class="jumbotron mb-5">
     <h1 class="display-1">
         <center>Results!</center>
     </h1> 
@@ -17,21 +17,18 @@
 
 <div class="container">
     <button class="btn btn-primary btn-lg btn-block" onclick="window.location.href = '/';">Search Again</button>
-
-
-
-        <div class="card-columns">
-                <% data["Search"].forEach(function(movie) { %>
-                        <div class="card text-white">
-                            <a class="card-title text-white" href="<%= movie["Poster"] %>"><img class="card-img" src="<%= movie["Poster"] %>" onerror="this.src='https://static1.squarespace.com/static/54ecf211e4b0ed744420c5b6/567f23f9841abaa3c919b3c0/5681d9cde0327c1884fbdb38/1499366267673/noimage.png?format=300w'">
-                           <div class="card-img-overlay">
-                                <h5 class="card-title text-center h3 movietitle">
-                                    <%= movie["Title"] %>
-                                </h5> 
-                            </div>
-                             </a>
-                        </div>
-            <% }) %>
-        </div>
+    <div class="card-columns row mt-5">
+        <% data["Search"].forEach((movie) => { %>
+                <div class="card text-white col-sm-4">
+                    <a class="card-title text-white" href="<%= movie["Poster"] %>"><img class="card-img" src="<%= movie["Poster"] %>" onerror="this.src='https://static1.squarespace.com/static/54ecf211e4b0ed744420c5b6/567f23f9841abaa3c919b3c0/5681d9cde0327c1884fbdb38/1499366267673/noimage.png?format=300w'">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title text-center h3 movietitle">
+                            <%= movie["Title"] %>
+                        </h5> 
+                    </div>
+                        </a>
+                </div>
+        <% }) %>
     </div>
+</div>
 
