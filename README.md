@@ -1,4 +1,4 @@
-# movieAPI
+# Poster Finder
 Search for your favorite movies and see their posters
 
 Live app can be found [HERE](https://movieapi-poster.herokuapp.com/)
