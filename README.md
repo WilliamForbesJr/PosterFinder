@@ -10,7 +10,8 @@ This project was inspired by a tutorial for RESTful APIs. I wanted to expand upo
 Quickly search movie database and pull up a list of posters.
 
 ## Screenshots
-Include logo/demo screenshot etc.
+![Search Page](https://i.imgur.com/qkzYZKNl.jpg "Search Page")
+![Results Page](https://i.imgur.com/4kaKl0el.jpg "Results Page")
 
 ## Tech used
 #### Built Using:
